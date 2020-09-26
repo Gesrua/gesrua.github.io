@@ -1,0 +1,10 @@
+digraph g {
+    bgcolor="transparent";
+    rankdir = LR;
+    node[shape=circle]
+    3->s[label="1",color="#66ccff"];
+    2->s[label="1",color="#ee0000"];
+    3->2[label="1",color="#EE82EE"];
+    t->2[label="1",color="#66ccff"];
+    t->3[label="1",color="#ee0000"];
+}

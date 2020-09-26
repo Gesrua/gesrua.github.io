@@ -1,0 +1,126 @@
+---
+title: 「SDOI 2009」E&D
+tags:
+  - SDOI
+  - 博弈论
+  - 分形
+  - 找规律
+  - 题解
+  - 省选
+categories:
+  - OI
+date: 2019-10-03 15:31:45
+---
+
+- 局面 $(x,y)~~~ x,y>0$
+- 操作 $(x,y)\rightarrow(a,b)~~~a+b=x$ 或 $a+b=y$
+
+$x,y\le 2\times 10^9$
+
+先手必败还是必胜？
+
+<!-- more -->
+
+---
+
+首先打个表，朴素算 $\operatorname{sg}$
+
+```cpp
+std::map<pii, int> sg;
+
+int calc(pii c) {
+    if (sg.count(c)) return sg[c];
+    std::vector<int> s;
+    rep(i, 1, c.first - 1) s.push_back(calc({i, c.first - i}));
+    rep(i, 1, c.second - 1) s.push_back(calc({i, c.second - i}));
+    std::sort(s.begin(), s.end());
+    s.erase(std::unique(s.begin(), s.end()), s.end());
+    int lst = -1;
+    for (auto i : s) {
+        if (i != lst + 1) return sg[c] = lst + 1;
+        lst = i;
+    }
+    return sg[c] = lst + 1;
+}
+```
+
+然后输到 Excel
+
+![](/images/P2148-1.png)
+
+非常的有规律
+
+```cpp
+#define c(x, p) (x % p ? x % p : p) // 0 % p = p
+int sg(ui x, ui y) {
+    for (ui i = 0, p = 2; i < 31; i++, p *= 2) {
+        if ((c(x, p) <= p / 2) && (c(y, p) <= p / 2)) return i;
+    }
+    return 31;
+}
+```
+
+$i$ 从小到大考虑， `if` 中的条件意思是在正方形的左上角 $1/4$
+
+```cpp
+#include <algorithm>
+#include <cassert>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
+#include <deque>
+#include <iostream>
+#include <map>
+#include <queue>
+#include <set>
+#include <stack>
+#include <string>
+#include <utility>
+#include <vector>
+#define rep(i, l, r) for (int i = (l); i <= (r); ++i)
+#define per(i, l, r) for (int i = (l); i >= (r); --i)
+using std::cerr;
+using std::cin;
+using std::cout;
+using std::endl;
+using std::make_pair;
+using std::pair;
+typedef pair<int, int> pii;
+typedef long long ll;
+typedef unsigned int ui;
+typedef unsigned long long ull;
+
+#define c(x, p) (x % p ? x % p : p)
+
+int sg(ui x, ui y) {
+    for (ui i = 0, p = 2; i < 31; i++, p *= 2) {
+        if ((c(x, p) <= p / 2) && (c(y, p) <= p / 2)) return i;
+    }
+    return 31;
+}
+
+int main() {
+#ifdef LOCAL
+    freopen("input", "r", stdin);
+#endif
+    std::ios::sync_with_stdio(false);
+    cout.tie(0);
+    int T;
+    cin >> T;
+    while (T--) {
+        cerr << "doing " << T << endl;
+        int n;
+        cin >> n;
+        n /= 2;
+        int ans = 0;
+        rep(i, 1, n) {
+            int x, y;
+            cin >> x >> y;
+            // cerr << x << ' ' << y << endl;
+            ans ^= sg(x, y);
+        }
+        cout << (ans ? "YES" : "NO") << std::endl;
+    }
+    return 0;
+}
+```
