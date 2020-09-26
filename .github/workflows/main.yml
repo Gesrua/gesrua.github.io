@@ -1,0 +1,35 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        submodules: true
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.8.6'
+    - run: python3 git_reset_mtime.py
+    - uses: actions/setup-node@master
+      with:
+        node-version: 14.9.0
+    - name: Install Dependencies
+      run: |
+        npm install -g hexo
+        npm install
+    - name: Clean
+      run: hexo clean
+    - name: Generate
+      run: |
+        hexo generate
+    - name: Checkdir
+      run: ls ./public
+    - name: Deploy
+      env:
+        GH_PAT: ${{ secrets.GH_PAT }}
+        Page_repo: "Gesrua/gesrua.github.io"
+      run: sh publish-to-gh-pages.sh
