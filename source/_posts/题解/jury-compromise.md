@@ -1,11 +1,11 @@
 ---
 title: Jury Compromise
 tags:
-  - 题解
   - 动态规划
   - 链表
 categories:
   - OI
+  - 题解
 date: 2019-07-20 22:01:03
 ---
 

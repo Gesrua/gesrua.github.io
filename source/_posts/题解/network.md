@@ -1,10 +1,10 @@
 ---
 title: Network，闇の連鎖
 tags:
-  - 题解
   - POJ
 categories:
   - OI
+  - 题解
 date: 2019-07-15 11:26:03
 ---
 

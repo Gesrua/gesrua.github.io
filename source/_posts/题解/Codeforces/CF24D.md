@@ -1,12 +1,12 @@
 ---
 title: 「Codeforces 24D」Broken Robot
 tags:
-  - 题解
   - Codeforces
   - 动态规划
   - 高斯消元
 categories:
   - OI
+  - 题解
 date: 2019-10-07 00:06:40
 ---
 

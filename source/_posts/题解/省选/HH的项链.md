@@ -2,13 +2,13 @@
 title: 「SDOI 2009」HH的项链
 tags:
   - SDOI
-  - 题解
   - 省选
   - 树状数组
   - 线段树
   - 可持久化
 categories:
   - OI
+  - 题解
 date: 2019-08-03 23:50:33
 ---
 

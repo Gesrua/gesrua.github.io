@@ -1,12 +1,12 @@
 ---
 title: 「POJ 2311」Cutting Game
 tags:
-  - 题解
   - 博弈论
   - 思维
   - POJ
 categories:
   - OI
+  - 题解
 date: 2019-10-04 14:43:52
 ---
 

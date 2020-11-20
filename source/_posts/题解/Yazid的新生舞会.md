@@ -1,13 +1,13 @@
 ---
 title: 「CodePlus 2017 11 月赛」Yazid 的新生舞会
 tags:
-  - 题解
   - 线段树
   - 数据结构
   - 差分
   - 众数
 categories:
   - OI
+  - 题解
 date: 2019-10-01 23:43:57
 ---
 

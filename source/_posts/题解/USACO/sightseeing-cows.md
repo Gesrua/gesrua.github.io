@@ -2,12 +2,12 @@
 title: 「USACO 2007 Dec. Gold」Sightseeing Cows
 tags:
   - 图论
-  - 题解
   - USACO
   - 负环
   - 0/1 分数规划
 categories:
   - OI
+  - 题解
 date: 2019-10-29 12:04:39
 ---
 

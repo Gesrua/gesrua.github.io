@@ -2,11 +2,11 @@
 title: 「USACO 2013」Photo
 date: 2019-10-17 13:19:52
 tags:
-  - 题解
   - USACO
   - 动态规划
 categories:
   - OI
+  - 题解
 ---
 
 给定长为 $n\le 2\times 10^5$ 的序列，你需要将其中 $k$ 个节点染色，满足 $m\le 10^5$ 组条件：$[l_i, r_i]$ 中有且仅有一个节点被染色。

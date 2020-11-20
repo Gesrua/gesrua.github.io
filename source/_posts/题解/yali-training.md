@@ -1,12 +1,12 @@
 ---
 title: 雅礼集训瞎做
 tags:
-  - 题解
   - 线段树
   - 势能分析
   - 找规律
 categories:
   - OI
+  - 题解
 date: 2020-01-22 13:09:52
 cover: thumbnails/76268289.jpg
 toc: true

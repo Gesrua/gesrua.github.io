@@ -1,13 +1,13 @@
 ---
 title: Comet OJ - 模拟赛测试 Day2
 tags:
-  - 题解
   - 'Comet OJ'
   - 字符串
   - 状态压缩
   - 动态规划
 categories:
   - OI
+  - 题解
 date: 2019-11-12 08:37:16
 ---
 
