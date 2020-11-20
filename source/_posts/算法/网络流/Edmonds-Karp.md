@@ -2,11 +2,11 @@
 title: Edmonds-Karp 算法
 tags:
   - 最大流
-  - 学习笔记
   - 算法
   - 网络流
 categories:
   - OI
+  - 学习笔记
 date: 2019-01-04 17:45:42
 ---
 

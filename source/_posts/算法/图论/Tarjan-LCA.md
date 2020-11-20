@@ -2,11 +2,11 @@
 title: 求 LCA 的 Tarjan 算法
 tags:
   - LCA
-  - 学习笔记
   - 算法
   - 图论
 categories:
   - OI
+  - 学习笔记
 date: 2019-07-14 20:27:12
 ---
 
