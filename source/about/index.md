@@ -1,9 +1,13 @@
 ---
-title: 关于
+title:
 date: 2018-06-17 21:33:30
-layout: post
+layout: page
+article:
+  licenses:
 ---
 
-一个在浙江宁波效实中学的无名蒟蒻。
+## 我？
 
-<div id="chart"></div>
+OI 退役，ZJ 高三现役，选考物化技
+
+喜欢精巧的结构
