@@ -5,7 +5,6 @@ tags:
 categories:
   - Geek
 date: 2019-08-24 12:27:58
-disableNunjucks: true
 ---
 
 忽然发现 GitHub Actions beta 的资格下来了，就想着折腾一下
