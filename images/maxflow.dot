@@ -1,0 +1,15 @@
+digraph g {
+    rankdir = LR;
+    node[shape=circle]
+    s->2[label="1/1",color="#ee0000"]
+    2->s[label="-1/0",color="#66ccff"]
+    s->3[label="1/1", color="#9999FF"]
+    3->s[label="-1/0", color="#EE82EE"]
+    2->3[label="0/1",color="#ee0000"]
+    3->2[label="0/0",color="#9999FF"]
+    2->t[label="1/1",color="#9999FF"]
+    t->2[label="-1/0",color="#EE82EE"]
+    3->t[label="1/1",color="#ee0000"]
+    t->3[label="-1/0",color="#66ccff"]
+    
+}
