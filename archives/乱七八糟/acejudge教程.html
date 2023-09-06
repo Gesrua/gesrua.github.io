@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>acejudge 教程 - Gesrua</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Gesrua"><meta name="msapplication-TileImage" content="/favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Gesrua"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="A simple terminal OI&amp;#x2F;ACM answer checker on Linux&amp;#x2F;UNIX acejudge 是一个命令行的 judger 因为没有文档，所以写了一个指南 安装 12git clone git@github.com:laekov&amp;#x2F;acejudge.git &amp;amp;&amp;amp; cd acejudgemake &amp;amp;&amp;amp; sudo make install"><meta property="og:type" content="blog"><meta property="og:title" content="acejudge 教程"><meta property="og:url" content="https://gesrua.xyz/archives/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/acejudge%E6%95%99%E7%A8%8B"><meta property="og:site_name" content="Gesrua"><meta property="og:description" content="A simple terminal OI&amp;#x2F;ACM answer checker on Linux&amp;#x2F;UNIX acejudge 是一个命令行的 judger 因为没有文档，所以写了一个指南 安装 12git clone git@github.com:laekov&amp;#x2F;acejudge.git &amp;amp;&amp;amp; cd acejudgemake &amp;amp;&amp;amp; sudo make install"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://gesrua.xyz/img/og_image.png"><meta property="article:published_time" content="2019-04-05T09:08:11.000Z"><meta property="article:modified_time" content="2020-09-26T08:05:15.000Z"><meta property="article:author" content="Gesrua"><meta property="article:tag" content="乱七八糟"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://gesrua.xyz/archives/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/acejudge%E6%95%99%E7%A8%8B"},"headline":"Gesrua","image":["https://gesrua.xyz/img/og_image.png"],"datePublished":"2019-04-05T09:08:11.000Z","dateModified":"2020-09-26T08:05:15.000Z","author":{"@type":"Person","name":"Gesrua"},"description":"A simple terminal OI&#x2F;ACM answer checker on Linux&#x2F;UNIX acejudge 是一个命令行的 judger 因为没有文档，所以写了一个指南 安装 12git clone git@github.com:laekov&#x2F;acejudge.git &amp;&amp; cd acejudgemake &amp;&amp; sudo make install"}</script><link rel="canonical" href="https://gesrua.xyz/archives/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/acejudge%E6%95%99%E7%A8%8B"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/images/logo.png" alt="Gesrua" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Github" href="https://github.com/Gesrua"><i class="fab fa-github"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="E-Mail" href="mailto:gesrua@gmail.com"><i class="fas fa-envelope"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-9-tablet is-9-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-04-05T09:08:11.000Z" title="2019-04-05T09:08:11.000Z">2019-04-05</time>发表</span><span class="level-item"><time dateTime="2020-09-26T08:05:15.000Z" title="2020-09-26T08:05:15.000Z">2020-09-26</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/OI/">OI</a></span></div></div><h1 class="title is-3 is-size-4-mobile">acejudge 教程</h1><div class="content"><p>A simple terminal OI/ACM answer checker on Linux/UNIX</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/laekov/acejudge">acejudge</a> 是一个命令行的 judger</p>
+<p>因为没有文档，所以写了一个指南</p>
+<h1>安装</h1>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:laekov/acejudge.git &amp;&amp; cd acejudge</span><br><span class="line">make &amp;&amp; sudo make install</span><br></pre></td></tr></table></figure>
+<h1>使用</h1>
+<h3 id="配置文件"><a class="header-anchor" href="#配置文件">¶ </a>配置文件</h3>
+<p>假定配置文件名为 <code>w.cfg</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">一个 printf 式的格式化字符串作为输入文件</span><br><span class="line">一个 printf 式的格式化字符串作为答案文件</span><br><span class="line">第一个数据编号 最后一个数据编号 时间(ms) 内存(MB)</span><br><span class="line">源程序名 </span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<article class="message is-success"><div class="message-body">
+<p>当输入文件为 <code>1.in 2.in ... 10.in</code> 答案文件为 <code>1.out 2.out ... 10.out</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">%d.in</span><br><span class="line">%d.out</span><br><span class="line">1 10 2000 512</span><br><span class="line">a.cpp</span><br></pre></td></tr></table></figure>
+</div></article>
+<article class="message is-success"><div class="message-body">
+<p>当数据放在 <code>/tmp</code> 文件夹，输入文件为 <code>dat1.in dat2.in ... dat20.in</code> 答案文件为 <code>dat1.out dat2.out ... dat20.out</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/tmp/dat%d.in</span><br><span class="line">/tmp/dat%d.out</span><br><span class="line">1 20 2000 512</span><br><span class="line">a.cpp</span><br></pre></td></tr></table></figure>
+</div></article>
+<p><code>acejudge -fast w.cfg</code> 来运行</p>
+<h3 id="例子"><a class="header-anchor" href="#例子">¶ </a>例子</h3>
+<p>acejudge 也提供交互实现配置</p>
+<pre>╭─<font color="#3F953A"><b>chaigidel@chaigidel-pc</b></font> <font color="#2F5AF3"><b>/tmp/rec</b></font>  
+╰─<font color="#2A2C33"><b>$</b></font> <font color="#3F953A">ls</font>
+10.in  10.out  1.in  1.out  2.in  2.out  3.in  3.out  4.in  4.out  5.in  5.out  6.in  6.out  7.in  7.out  8.in  8.out  9.in  9.out  a.cpp
+╭─<font color="#3F953A"><b>chaigidel@chaigidel-pc</b></font> <font color="#2F5AF3"><b>/tmp/rec</b></font>  
+╰─<font color="#2A2C33"><b>$</b></font> <font color="#3F953A">acejudge</font>     
+<span style="background-color:#3F953A"><font color="#000000">Ace Judge</font></span> V3.0 Beta3 <font color="#950095">(Released 01/04 2015) </font>
+			<font color="#2F5AF3">by CDQZ_</font><font color="#DE3E35">l</font><font color="#3F953A">a</font><font color="#D2B67C">e</font><font color="#2F5AF3">k</font><font color="#950095">o</font><font color="#3F953A">v</font> 
+C - Configure
+R - Run
+Q - Quit
+c
+C - Config problem
+L - Show cfg now
+E - Load existing cfg file
+W - Save cfg file
+c
+<font color="#D2B67C">IO data format</font>
+<font color="#950095">%d</font>
+<font color="#D2B67C">Input data sufix</font>
+<font color="#950095">.in</font>
+<font color="#D2B67C">Output data sufix</font>
+<font color="#950095">.out</font>
+<font color="#D2B67C">Begin - End</font>
+<font color="#950095">1 10</font>
+<font color="#D2B67C">Time limit(ms)</font>
+<font color="#950095">2000</font>
+<font color="#D2B67C">Memory limit(MB)</font>
+<font color="#950095">512</font>
+<span style="background-color:#3F953A"><font color="#000000">Ace Judge</font></span> V3.0 Beta3 <font color="#950095">(Released 01/04 2015) </font>
+			<font color="#2F5AF3">by CDQZ_</font><font color="#DE3E35">l</font><font color="#3F953A">a</font><font color="#D2B67C">e</font><font color="#2F5AF3">k</font><font color="#950095">o</font><font color="#3F953A">v</font> 
+C - Configure
+R - Run
+Q - Quit
+c
+C - Config problem
+L - Show cfg now
+E - Load existing cfg file
+W - Save cfg file
+w
+Cfg file name:
+<font color="#950095">w.cfg</font>
+<span style="background-color:#3F953A"><font color="#000000">Ace Judge</font></span> V3.0 Beta3 <font color="#950095">(Released 01/04 2015) </font>
+			<font color="#2F5AF3">by CDQZ_</font><font color="#DE3E35">l</font><font color="#3F953A">a</font><font color="#D2B67C">e</font><font color="#2F5AF3">k</font><font color="#950095">o</font><font color="#3F953A">v</font> 
+C - Configure
+R - Run
+Q - Quit
+r
+<font color="#D2B67C">Program name</font>
+<font color="#950095">a.cpp</font>
+<font color="#D2B67C">Testing program: </font><font color="#950095">a.cpp</font>
+<font color="#3F953A">Compile ok</font>
+<font color="#3F953A">Test case 1</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">1213</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">65116</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 2</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">206</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">9488</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 3</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">325</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">9492</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 4</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">15</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">9280</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 5</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">1428</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">60760</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 6</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">1832</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">60308</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 7</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">19</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">9224</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 8</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">1918</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">60328</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 9</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">1352</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">60348</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 10</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">1337</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">60132</font><font color="#D2B67C"> KB</font>
+<font color="#2F5AF3">Score ratio: </font><font color="#3F953A">100.00%</font>
+Valid time used: <font color="#950095">9645</font> ms	Max memory used: <font color="#950095">65116</font> KB
+<font color="#3F953A">Press any key to continue</font>
+<span style="background-color:#3F953A"><font color="#000000">Ace Judge</font></span> V3.0 Beta3 <font color="#950095">(Released 01/04 2015) </font>
+			<font color="#2F5AF3">by CDQZ_</font><font color="#DE3E35">l</font><font color="#3F953A">a</font><font color="#D2B67C">e</font><font color="#2F5AF3">k</font><font color="#950095">o</font><font color="#3F953A">v</font> 
+C - Configure
+R - Run
+Q - Quit
+q
+╭─<font color="#3F953A"><b>chaigidel@chaigidel-pc</b></font> <font color="#2F5AF3"><b>/tmp/rec</b></font>  
+╰─<font color="#2A2C33"><b>$</b></font> <font color="#3F953A">cat</font> <u style="text-decoration-style:single">w.cfg</u>
+%d.in
+%d.out
+1 10 2000 512
+a.cpp
+╭─<font color="#3F953A"><b>chaigidel@chaigidel-pc</b></font> <font color="#2F5AF3"><b>/tmp/rec</b></font>  
+╰─<font color="#2A2C33"><b>$</b></font> <font color="#3F953A">acejudge</font> -fast <u style="text-decoration-style:single">w.cfg</u>
+<font color="#D2B67C">Testing program: </font><font color="#950095">a.cpp</font>
+<font color="#3F953A">Compile ok</font>
+<font color="#3F953A">Test case 1</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">1230</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">65120</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 2</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">266</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">9524</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 3</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">313</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">9392</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 4</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">17</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">9312</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 5</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">1450</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">60720</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 6</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">1924</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">60372</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 7</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">24</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">9248</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 8</font>	<font color="#D2B67C">Time limit exceeded</font>
+<font color="#3F953A">Test case 9</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">1487</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">60320</font><font color="#D2B67C"> KB</font>
+<font color="#3F953A">Test case 10</font>	<font color="#3F953A">Accepted</font>	<font color="#D2B67C">time: </font><font color="#950095">1507</font><font color="#D2B67C"> MS</font>	<font color="#D2B67C">memory: </font><font color="#950095">60164</font><font color="#D2B67C"> KB</font>
+<font color="#2F5AF3">Score ratio: </font><font color="#DE3E35">90.00%</font>
+Valid time used: <font color="#950095">8218</font> ms	Max memory used: <font color="#950095">65120</font> KB
+<font color="#3F953A">Press any key to continue</font>
+</pre></div><div class="article-licensing box"><div class="licensing-title"><p>acejudge 教程</p><p><a href="https://gesrua.xyz/archives/乱七八糟/acejudge教程">https://gesrua.xyz/archives/乱七八糟/acejudge教程</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Gesrua</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2019-04-05</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2020-09-26</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="NonCommercial" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="fab fa-creative-commons-nc"></i></a><a class="icon" rel="noopener" target="_blank" title="ShareAlike" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="fab fa-creative-commons-sa"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/">乱七八糟</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/archives/OI%E6%A8%A1%E6%9D%BF"><i class="level-item fas fa-chevron-left"></i><span class="level-item">OI模板</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/archives/%E7%AE%97%E6%B3%95/FFT"><span class="level-item">快速傅里叶变换 Fast Fourier Transform</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-3-tablet is-3-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#"><span class="level-left"><span class="level-item">1</span><span class="level-item">安装</span></span></a></li><li><a class="level is-mobile" href="#"><span class="level-left"><span class="level-item">2</span><span class="level-item">使用</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#例子"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">例子</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Geek/"><span class="level-start"><span class="level-item">Geek</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/OI/"><span class="level-start"><span class="level-item">OI</span></span><span class="level-end"><span class="level-item tag">69</span></span></a><ul><li><a class="level is-mobile" href="/categories/OI/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="level-start"><span class="level-item">学习笔记</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/categories/OI/%E9%A2%98%E8%A7%A3/"><span class="level-start"><span class="level-item">题解</span></span><span class="level-end"><span class="level-item tag">51</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><span class="level-start"><span class="level-item">操作系统</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"><span class="level-start"><span class="level-item">碎碎念</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%AB%98%E4%B8%AD/"><span class="level-start"><span class="level-item">高中</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E9%AB%98%E4%B8%AD/%E5%8C%96%E5%AD%A6/"><span class="level-start"><span class="level-item">化学</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/"><span class="level-start"><span class="level-item">数学</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%AB%98%E4%B8%AD/%E7%89%A9%E7%90%86/"><span class="level-start"><span class="level-item">物理</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/images/logo.png" alt="Gesrua" height="28"></a><p class="is-size-7"><span>&copy; 2023 Gesrua</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="NonCommercial" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="ShareAlike" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="fab fa-creative-commons-sa"></i></a></p></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/KaTeX/0.12.0/katex.min.js"></script><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/KaTeX/0.12.0/katex.min.css"><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
