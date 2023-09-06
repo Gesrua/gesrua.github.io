@@ -10,9 +10,9 @@ jobs:
     - uses: actions/checkout@master
       with:
         submodules: true
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v4
       with:
-        python-version: '3.8.6'
+        python-version: '3.10'
     - run: python3 git_reset_mtime.py
     - uses: actions/setup-node@master
       with:
